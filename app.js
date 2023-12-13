@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 
-const productRoutes = require('./routes/campaign');
+const campaignRoutes = require('./routes/campaign');
 
 const app = express();
 
@@ -18,6 +18,6 @@ app.use(express.static('images'));
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
-app.use('/api/campaign', productRoutes);
+app.use('/api/campaign', campaignRoutes);
 
 module.exports = app;
